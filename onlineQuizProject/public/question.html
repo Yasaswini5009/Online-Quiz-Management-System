@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Questions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6fb;
+            padding: 25px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 25px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 90px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4338ca;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #1e3a8a;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Add Quiz Questions</h2>
+
+        <form id="questionForm">
+
+            <label>Select Quiz</label>
+
+            <select id="quiz" required>
+                <option value="">Select Quiz</option>
+                <option value="1">Java Programming</option>
+                <option value="2">Python Programming</option>
+                <option value="3">Computer Networks</option>
+            </select>
+
+            <label>Question</label>
+
+            <textarea id="question"
+                placeholder="Enter your question"
+                required></textarea>
+
+            <label>Option A</label>
+            <input type="text" id="optionA"
+                placeholder="Enter option A" required>
+
+            <label>Option B</label>
+            <input type="text" id="optionB"
+                placeholder="Enter option B" required>
+
+            <label>Option C</label>
+            <input type="text" id="optionC"
+                placeholder="Enter option C" required>
+
+            <label>Option D</label>
+            <input type="text" id="optionD"
+                placeholder="Enter option D" required>
+
+            <label>Correct Answer</label>
+
+            <select id="answer" required>
+                <option value="">Select Correct Answer</option>
+                <option value="A">Option A</option>
+                <option value="B">Option B</option>
+                <option value="C">Option C</option>
+                <option value="D">Option D</option>
+            </select>
+
+            <button type="submit">Add Question</button>
+
+        </form>
+
+        <a href="admin.html" class="back">
+            Back to Admin Dashboard
+        </a>
+
+    </div>
+
+    <script>
+
+        document.getElementById("questionForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const question = document.getElementById("question").value;
+            const answer = document.getElementById("answer").value;
+
+            alert(
+                "Question Added Successfully!\n\n" +
+                "Question: " + question +
+                "\nCorrect Answer: Option " + answer
+            );
+
+            document.getElementById("questionForm").reset();
+
+        });
+
+    </script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Questions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6fb;
+            padding: 25px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 25px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 90px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4338ca;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #1e3a8a;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Add Quiz Questions</h2>
+
+        <form id="questionForm">
+
+            <label>Select Quiz</label>
+
+            <select id="quiz" required>
+                <option value="">Select Quiz</option>
+                <option value="1">Java Programming</option>
+                <option value="2">Python Programming</option>
+                <option value="3">Computer Networks</option>
+            </select>
+
+            <label>Question</label>
+
+            <textarea id="question"
+                placeholder="Enter your question"
+                required></textarea>
+
+            <label>Option A</label>
+            <input type="text" id="optionA"
+                placeholder="Enter option A" required>
+
+            <label>Option B</label>
+            <input type="text" id="optionB"
+                placeholder="Enter option B" required>
+
+            <label>Option C</label>
+            <input type="text" id="optionC"
+                placeholder="Enter option C" required>
+
+            <label>Option D</label>
+            <input type="text" id="optionD"
+                placeholder="Enter option D" required>
+
+            <label>Correct Answer</label>
+
+            <select id="answer" required>
+                <option value="">Select Correct Answer</option>
+                <option value="A">Option A</option>
+                <option value="B">Option B</option>
+                <option value="C">Option C</option>
+                <option value="D">Option D</option>
+            </select>
+
+            <button type="submit">Add Question</button>
+
+        </form>
+
+        <a href="admin.html" class="back">
+            Back to Admin Dashboard
+        </a>
+
+    </div>
+
+    <script>
+
+        document.getElementById("questionForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const question = document.getElementById("question").value;
+            const answer = document.getElementById("answer").value;
+
+            alert(
+                "Question Added Successfully!\n\n" +
+                "Question: " + question +
+                "\nCorrect Answer: Option " + answer
+            );
+
+            document.getElementById("questionForm").reset();
+
+        });
+
+    </script>
+
+</body>
+</html>

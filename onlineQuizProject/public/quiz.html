@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Quiz</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6fb;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 550px;
+            margin: 30px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4338ca;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Add New Quiz</h2>
+
+        <form id="quizForm">
+
+            <label>Quiz Title</label>
+            <input type="text" id="quizTitle"
+                   placeholder="Enter quiz title" required>
+
+            <label>Description</label>
+            <textarea id="description"
+                      placeholder="Enter quiz description"
+                      required></textarea>
+
+            <label>Duration (Minutes)</label>
+            <input type="number" id="duration"
+                   placeholder="Enter duration"
+                   min="1" required>
+
+            <label>Total Marks</label>
+            <input type="number" id="totalMarks"
+                   placeholder="Enter total marks"
+                   min="1" required>
+
+            <button type="submit">Create Quiz</button>
+
+        </form>
+
+        <a href="admin.html" class="back">
+            Back to Admin Dashboard
+        </a>
+
+    </div>
+
+    <script>
+        document.getElementById("quizForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const title = document.getElementById("quizTitle").value;
+            const description = document.getElementById("description").value;
+            const duration = document.getElementById("duration").value;
+            const totalMarks = document.getElementById("totalMarks").value;
+
+            alert(
+                "Quiz Details Entered Successfully!\n\n" +
+                "Title: " + title +
+                "\nDuration: " + duration + " minutes" +
+                "\nTotal Marks: " + totalMarks
+            );
+        });
+    </script>
+
+</body>
+</html>
